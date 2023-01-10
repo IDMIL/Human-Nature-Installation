@@ -1,0 +1,42 @@
+{
+    "fileversion": "2.4",
+    "description": "",
+    "values": [],
+    "views": [],
+    "maps": [
+        {
+            "sources": [
+                "TStick_311.1/raw/capsense"
+            ],
+            "destinations": [
+                "SuperCollider.1/nature/pad/amp"
+            ],
+            "expression": "sMin=0;sMax=1;dMin=0.1;dMax=0.8;sRange=sMax-sMin;m=sRange?((dMax-dMin)/sRange):0;b=sRange?(dMin*sMax-dMax*sMin)/sRange:dMin;y=m*x.sum()/16+b;",
+            "muted": false,
+            "process_loc": "SOURCE",
+            "protocol": "UDP",
+            "scope": [
+                "TStick_311.1"
+            ],
+            "use_inst": false,
+            "version": 0
+        },
+        {
+            "sources": [
+                "TStick_311.1/instrument/squeeze"
+            ],
+            "destinations": [
+                "SuperCollider.1/nature/pad/cutOff"
+            ],
+            "expression": "sMin=0;sMax=1;dMin=400;dMax=10000;sRange=sMax-sMin;m=sRange?((dMax-dMin)/sRange):0;b=sRange?(dMin*sMax-dMax*sMin)/sRange:dMin;y=m*x+b;",
+            "muted": false,
+            "process_loc": "SOURCE",
+            "protocol": "UDP",
+            "scope": [
+                "TStick_311.1"
+            ],
+            "use_inst": false,
+            "version": 0
+        }
+    ]
+}

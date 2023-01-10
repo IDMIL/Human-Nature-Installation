@@ -1,0 +1,59 @@
+{
+    "fileversion": "2.4",
+    "description": "",
+    "values": [],
+    "views": [],
+    "maps": [
+        {
+            "sources": [
+                "TStick_194.1/raw/capsense"
+            ],
+            "destinations": [
+                "SuperCollider.1/humans/grain/amp"
+            ],
+            "expression": "sMin=0;sMax=1;dMin=0.0;dMax=0.6;sRange=sMax-sMin;m=sRange?((dMax-dMin)/sRange):0;b=sRange?(dMin*sMax-dMax*sMin)/sRange:dMin;y=m*x.sum()/20+b;",
+            "muted": false,
+            "process_loc": "SOURCE",
+            "protocol": "UDP",
+            "scope": [
+                "TStick_194.1"
+            ],
+            "use_inst": false,
+            "version": 0
+        },
+        {
+            "sources": [
+                "TStick_194.1/instrument/shake"
+            ],
+            "destinations": [
+                "SuperCollider.1/humans/grain/freqScale"
+            ],
+            "expression": "sMin=0;sMax=100;dMin=0;dMax=0.6;sRange=sMax-sMin;m=sRange?((dMax-dMin)/sRange):0;b=sRange?(dMin*sMax-dMax*sMin)/sRange:dMin;y=m*x.sum()/3+b;",
+            "muted": false,
+            "process_loc": "SOURCE",
+            "protocol": "UDP",
+            "scope": [
+                "TStick_194.1"
+            ],
+            "use_inst": false,
+            "version": 0
+        },
+        {
+            "sources": [
+                "TStick_194.1/instrument/shake"
+            ],
+            "destinations": [
+                "SuperCollider.1/humans/grain/size"
+            ],
+            "expression": "sMin=0;sMax=100;dMin=0;dMax=0.4;sRange=sMax-sMin;m=sRange?((dMax-dMin)/sRange):0;b=sRange?(dMin*sMax-dMax*sMin)/sRange:dMin;y=m*x.sum()/3+b;",
+            "muted": false,
+            "process_loc": "SOURCE",
+            "protocol": "UDP",
+            "scope": [
+                "TStick_194.1"
+            ],
+            "use_inst": false,
+            "version": 0
+        }
+    ]
+}

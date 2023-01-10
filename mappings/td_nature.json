@@ -1,0 +1,127 @@
+{
+    "fileversion": "2.4",
+    "description": "",
+    "values": [],
+    "views": [],
+    "maps": [
+        {
+            "sources": [
+                "TStick_194.1/instrument/shake"
+            ],
+            "destinations": [
+                "TD_nature.1/particleRadius"
+            ],
+            "expression": "sMin=0;sMax=150;dMin=0;dMax=1;sRange=sMax-sMin;m=sRange?((dMax-dMin)/sRange):0;b=sRange?(dMin*sMax-dMax*sMin)/sRange:dMin;y=m*x.sum()/3+b;",
+            "muted": false,
+            "process_loc": "SOURCE",
+            "protocol": "UDP",
+            "scope": [
+                "TStick_194.1"
+            ],
+            "use_inst": false,
+            "version": 0
+        },
+        {
+            "sources": [
+                "TStick_194.1/instrument/shake"
+            ],
+            "destinations": [
+                "TD_nature.1/displace"
+            ],
+            "expression": "sMin=0;sMax=150;dMin=0;dMax=1;sRange=sMax-sMin;m=sRange?((dMax-dMin)/sRange):0;b=sRange?(dMin*sMax-dMax*sMin)/sRange:dMin;y=m*x.sum()/12+b;",
+            "muted": false,
+            "process_loc": "SOURCE",
+            "protocol": "UDP",
+            "scope": [
+                "TStick_194.1"
+            ],
+            "use_inst": false,
+            "version": 0
+        },
+        {
+            "sources": [
+                "TStick_203.1/ypr"
+            ],
+            "destinations": [
+                "TD_nature.1/camRotX"
+            ],
+            "expression": "sMin=-3.15;sMax=3.15;dMin=0;dMax=1;sRange=sMax-sMin;m=sRange?((dMax-dMin)/sRange):0;b=sRange?(dMin*sMax-dMax*sMin)/sRange:dMin;y=m*x[0]+b;",
+            "muted": false,
+            "process_loc": "SOURCE",
+            "protocol": "UDP",
+            "scope": [
+                "TStick_203.1"
+            ],
+            "use_inst": false,
+            "version": 0
+        },
+        {
+            "sources": [
+                "TStick_203.1/ypr"
+            ],
+            "destinations": [
+                "TD_nature.1/camRotY"
+            ],
+            "expression": "sMin=-1.57;sMax=1.57;dMin=0;dMax=1;sRange=sMax-sMin;m=sRange?((dMax-dMin)/sRange):0;b=sRange?(dMin*sMax-dMax*sMin)/sRange:dMin;y=m*x[1]+b;",
+            "muted": false,
+            "process_loc": "SOURCE",
+            "protocol": "UDP",
+            "scope": [
+                "TStick_203.1"
+            ],
+            "use_inst": false,
+            "version": 0
+        },
+        {
+            "sources": [
+                "TStick_311.1/instrument/squeeze"
+            ],
+            "destinations": [
+                "TD_nature.1/hueOffset"
+            ],
+            "expression": "y=x",
+            "muted": false,
+            "process_loc": "SOURCE",
+            "protocol": "UDP",
+            "scope": [
+                "TStick_311.1"
+            ],
+            "use_inst": false,
+            "version": 0
+        },
+        {
+            "sources": [
+                "TStick_311.1/instrument/squeeze"
+            ],
+            "destinations": [
+                "TD_nature.1/forceStrength"
+            ],
+            "expression": "y=x;",
+            "muted": false,
+            "process_loc": "SOURCE",
+            "protocol": "UDP",
+            "scope": [
+                "TStick_311.1"
+            ],
+            "use_inst": false,
+            "version": 0
+        },
+        {
+            "sources": [
+                "TStick_311.1/raw/capsense"
+            ],
+            "destinations": [
+                "TD_nature.1/camTransZ"
+            ],
+            "expression": "sMin=0;sMax=1;dMin=0;dMax=1;sRange=sMax-sMin;m=sRange?((dMax-dMin)/sRange):0;b=sRange?(dMin*sMax-dMax*sMin)/sRange:dMin;y=m*x.sum()/16+b;",
+            "muted": false,
+            "process_loc": "SOURCE",
+            "protocol": "UDP",
+            "scope": [
+                "TStick_311.1"
+            ],
+            "use_inst": false,
+            "version": 0
+        }
+    ]
+}

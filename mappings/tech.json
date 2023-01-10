@@ -1,0 +1,467 @@
+{
+    "fileversion": "2.4",
+    "description": "",
+    "values": [],
+    "views": [],
+    "maps": [
+        {
+            "sources": [
+                "TStick_194.1/raw/capsense"
+            ],
+            "destinations": [
+                "SuperCollider.1/humans/grain/amp"
+            ],
+            "expression": "sMin=0;sMax=1;dMin=0.0;dMax=0.6;sRange=sMax-sMin;m=sRange?((dMax-dMin)/sRange):0;b=sRange?(dMin*sMax-dMax*sMin)/sRange:dMin;y=m*x.sum()/20+b;",
+            "muted": false,
+            "process_loc": "SOURCE",
+            "protocol": "UDP",
+            "scope": [
+                "TStick_194.1"
+            ],
+            "use_inst": false,
+            "version": 0
+        },
+        {
+            "sources": [
+                "TStick_194.1/instrument/shake"
+            ],
+            "destinations": [
+                "SuperCollider.1/humans/grain/freqScale"
+            ],
+            "expression": "sMin=0;sMax=100;dMin=0;dMax=0.6;sRange=sMax-sMin;m=sRange?((dMax-dMin)/sRange):0;b=sRange?(dMin*sMax-dMax*sMin)/sRange:dMin;y=m*x.sum()/3+b;",
+            "muted": false,
+            "process_loc": "SOURCE",
+            "protocol": "UDP",
+            "scope": [
+                "TStick_194.1"
+            ],
+            "use_inst": false,
+            "version": 0
+        },
+        {
+            "sources": [
+                "TStick_194.1/instrument/shake"
+            ],
+            "destinations": [
+                "SuperCollider.1/humans/grain/size"
+            ],
+            "expression": "sMin=0;sMax=100;dMin=0;dMax=0.4;sRange=sMax-sMin;m=sRange?((dMax-dMin)/sRange):0;b=sRange?(dMin*sMax-dMax*sMin)/sRange:dMin;y=m*x.sum()/3+b;",
+            "muted": false,
+            "process_loc": "SOURCE",
+            "protocol": "UDP",
+            "scope": [
+                "TStick_194.1"
+            ],
+            "use_inst": false,
+            "version": 0
+        },
+        {
+            "sources": [
+                "TStick_203.1/raw/capsense"
+            ],
+            "destinations": [
+                "SuperCollider.1/humans/pad/sawAmp"
+            ],
+            "expression": "sMin=0;sMax=1;dMin=0;dMax=0.3;sRange=sMax-sMin;m=sRange?((dMax-dMin)/sRange):0;b=sRange?(dMin*sMax-dMax*sMin)/sRange:dMin;y=m*x.sum()/20+b;",
+            "muted": false,
+            "process_loc": "SOURCE",
+            "protocol": "UDP",
+            "scope": [
+                "TStick_203.1"
+            ],
+            "use_inst": false,
+            "version": 0
+        },
+        {
+            "sources": [
+                "TStick_203.1/ypr"
+            ],
+            "destinations": [
+                "SuperCollider.1/humans/spatial/crackAzi"
+            ],
+            "expression": "sMin=-3.15;sMax=3.15;dMin=-90;dMax=90;sRange=sMax-sMin;m=sRange?((dMax-dMin)/sRange):0;b=sRange?(dMin*sMax-dMax*sMin)/sRange:dMin;y=m*x[0]+b;",
+            "muted": false,
+            "process_loc": "SOURCE",
+            "protocol": "UDP",
+            "scope": [
+                "TStick_203.1"
+            ],
+            "use_inst": false,
+            "version": 0
+        },
+        {
+            "sources": [
+                "TStick_203.1/ypr"
+            ],
+            "destinations": [
+                "SuperCollider.1/humans/spatial/ringBgAzi"
+            ],
+            "expression": "sMin=-3.15;sMax=3.15;dMin=-90;dMax=90;sRange=sMax-sMin;m=sRange?((dMax-dMin)/sRange):0;b=sRange?(dMin*sMax-dMax*sMin)/sRange:dMin;y=m*x[0]+b;",
+            "muted": false,
+            "process_loc": "SOURCE",
+            "protocol": "UDP",
+            "scope": [
+                "TStick_203.1"
+            ],
+            "use_inst": false,
+            "version": 0
+        },
+        {
+            "sources": [
+                "TStick_203.1/ypr"
+            ],
+            "destinations": [
+                "SuperCollider.1/humans/spatial/ringMelAzi"
+            ],
+            "expression": "sMin=-3.15;sMax=3.15;dMin=-90;dMax=90;sRange=sMax-sMin;m=sRange?((dMax-dMin)/sRange):0;b=sRange?(dMin*sMax-dMax*sMin)/sRange:dMin;y=m*x[0]+b;",
+            "muted": false,
+            "process_loc": "SOURCE",
+            "protocol": "UDP",
+            "scope": [
+                "TStick_203.1"
+            ],
+            "use_inst": false,
+            "version": 0
+        },
+        {
+            "sources": [
+                "TStick_203.1/raw/capsense"
+            ],
+            "destinations": [
+                "SuperCollider.1/humans/chaos/amp"
+            ],
+            "expression": "sMin=0;sMax=1;dMin=0;dMax=0.3;sRange=sMax-sMin;m=sRange?((dMax-dMin)/sRange):0;b=sRange?(dMin*sMax-dMax*sMin)/sRange:dMin;y=m*x.sum()/20+b;",
+            "muted": false,
+            "process_loc": "SOURCE",
+            "protocol": "UDP",
+            "scope": [
+                "TStick_203.1"
+            ],
+            "use_inst": false,
+            "version": 0
+        },
+        {
+            "sources": [
+                "TStick_203.1/raw/capsense"
+            ],
+            "destinations": [
+                "SuperCollider.1/humans/chaos/release"
+            ],
+            "expression": "sMin=0;sMax=1;dMin=0;dMax=0.5;sRange=sMax-sMin;m=sRange?((dMax-dMin)/sRange):0;b=sRange?(dMin*sMax-dMax*sMin)/sRange:dMin;y=m*x.sum()/20+b;",
+            "muted": false,
+            "process_loc": "SOURCE",
+            "protocol": "UDP",
+            "scope": [
+                "TStick_203.1"
+            ],
+            "use_inst": false,
+            "version": 0
+        },
+        {
+            "sources": [
+                "TStick_311.1/instrument/squeeze"
+            ],
+            "destinations": [
+                "SuperCollider.1/humans/ring/decay"
+            ],
+            "expression": "sMin=0;sMax=1;dMin=.1;dMax=.5;sRange=sMax-sMin;m=sRange?((dMax-dMin)/sRange):0;b=sRange?(dMin*sMax-dMax*sMin)/sRange:dMin;y=m*x+b;",
+            "muted": false,
+            "process_loc": "SOURCE",
+            "protocol": "UDP",
+            "scope": [
+                "TStick_311.1"
+            ],
+            "use_inst": false,
+            "version": 0
+        },
+        {
+            "sources": [
+                "TStick_311.1/instrument/squeeze"
+            ],
+            "destinations": [
+                "SuperCollider.1/humans/ring/ringMult"
+            ],
+            "expression": "sMin=0;sMax=1;dMin=.6;dMax=10;sRange=sMax-sMin;m=sRange?((dMax-dMin)/sRange):0;b=sRange?(dMin*sMax-dMax*sMin)/sRange:dMin;y=m*x+b;",
+            "muted": false,
+            "process_loc": "SOURCE",
+            "protocol": "UDP",
+            "scope": [
+                "TStick_311.1"
+            ],
+            "use_inst": false,
+            "version": 0
+        },
+        {
+            "sources": [
+                "TStick_311.1/raw/capsense"
+            ],
+            "destinations": [
+                "SuperCollider.1/humans/ring/amp1"
+            ],
+            "expression": "y=min(0.8, x[0:5].sum()/5);",
+            "muted": false,
+            "process_loc": "SOURCE",
+            "protocol": "UDP",
+            "scope": [
+                "TStick_311.1"
+            ],
+            "use_inst": false,
+            "version": 0
+        },
+        {
+            "sources": [
+                "TStick_311.1/raw/capsense"
+            ],
+            "destinations": [
+                "SuperCollider.1/humans/ring/amp2"
+            ],
+            "expression": "y=min(0.8, x[6:10].sum()/5);",
+            "muted": false,
+            "process_loc": "SOURCE",
+            "protocol": "UDP",
+            "scope": [
+                "TStick_311.1"
+            ],
+            "use_inst": false,
+            "version": 0
+        },
+        {
+            "sources": [
+                "TStick_311.1/raw/capsense"
+            ],
+            "destinations": [
+                "SuperCollider.1/humans/ring/amp3"
+            ],
+            "expression": "y=min(0.6, x[11:15].sum()/5);",
+            "muted": false,
+            "process_loc": "SOURCE",
+            "protocol": "UDP",
+            "scope": [
+                "TStick_311.1"
+            ],
+            "use_inst": false,
+            "version": 0
+        },
+        {
+            "sources": [
+                "TStick_194.1/raw/capsense"
+            ],
+            "destinations": [
+                "TD_technology.1/birth"
+            ],
+            "expression": "y=x.sum()/16;",
+            "muted": false,
+            "process_loc": "SOURCE",
+            "protocol": "UDP",
+            "scope": [
+                "TStick_194.1"
+            ],
+            "use_inst": false,
+            "version": 0
+        },
+        {
+            "sources": [
+                "TStick_194.1/instrument/shake"
+            ],
+            "destinations": [
+                "TD_technology.1/bloomIntensity"
+            ],
+            "expression": "sMin=0;sMax=100;dMin=0;dMax=1;sRange=sMax-sMin;m=sRange?((dMax-dMin)/sRange):0;b=sRange?(dMin*sMax-dMax*sMin)/sRange:dMin;y=m*x.sum()/3+b;",
+            "muted": false,
+            "process_loc": "SOURCE",
+            "protocol": "UDP",
+            "scope": [
+                "TStick_194.1"
+            ],
+            "use_inst": false,
+            "version": 0
+        },
+        {
+            "sources": [
+                "TStick_194.1/instrument/shake"
+            ],
+            "destinations": [
+                "TD_technology.1/bloomZ"
+            ],
+            "expression": "sMin=0;sMax=100;dMin=0;dMax=1;sRange=sMax-sMin;m=sRange?((dMax-dMin)/sRange):0;b=sRange?(dMin*sMax-dMax*sMin)/sRange:dMin;y=m*x.sum()/3+b;",
+            "muted": false,
+            "process_loc": "SOURCE",
+            "protocol": "UDP",
+            "scope": [
+                "TStick_194.1"
+            ],
+            "use_inst": false,
+            "version": 0
+        },
+        {
+            "sources": [
+                "TStick_203.1/ypr"
+            ],
+            "destinations": [
+                "TD_technology.1/gravityX"
+            ],
+            "expression": "sMin=-3.15;sMax=3.15;dMin=1;dMax=0;sRange=sMax-sMin;m=sRange?((dMax-dMin)/sRange):0;b=sRange?(dMin*sMax-dMax*sMin)/sRange:dMin;y=m*x[0]+b;",
+            "muted": false,
+            "process_loc": "SOURCE",
+            "protocol": "UDP",
+            "scope": [
+                "TStick_203.1"
+            ],
+            "use_inst": false,
+            "version": 0
+        },
+        {
+            "sources": [
+                "TStick_203.1/ypr"
+            ],
+            "destinations": [
+                "TD_technology.1/gravityY"
+            ],
+            "expression": "sMin=-1.57;sMax=1.57;dMin=0;dMax=1;sRange=sMax-sMin;m=sRange?((dMax-dMin)/sRange):0;b=sRange?(dMin*sMax-dMax*sMin)/sRange:dMin;y=m*x[1]+b;",
+            "muted": false,
+            "process_loc": "SOURCE",
+            "protocol": "UDP",
+            "scope": [
+                "TStick_203.1"
+            ],
+            "use_inst": false,
+            "version": 0
+        },
+        {
+            "sources": [
+                "TStick_203.1/ypr"
+            ],
+            "destinations": [
+                "TD_technology.1/forceX"
+            ],
+            "expression": "sMin=-3.14159;sMax=3.14159;dMin=1;dMax=0;sRange=sMax-sMin;m=sRange?((dMax-dMin)/sRange):0;b=sRange?(dMin*sMax-dMax*sMin)/sRange:dMin;y=m*x[0]+b;",
+            "muted": false,
+            "process_loc": "SOURCE",
+            "protocol": "UDP",
+            "scope": [
+                "TStick_203.1"
+            ],
+            "use_inst": false,
+            "version": 0
+        },
+        {
+            "sources": [
+                "TStick_203.1/ypr"
+            ],
+            "destinations": [
+                "TD_technology.1/forceY"
+            ],
+            "expression": "sMin=-1.57;sMax=1.57;dMin=0;dMax=1;sRange=sMax-sMin;m=sRange?((dMax-dMin)/sRange):0;b=sRange?(dMin*sMax-dMax*sMin)/sRange:dMin;y=m*x[1]+b;",
+            "muted": false,
+            "process_loc": "SOURCE",
+            "protocol": "UDP",
+            "scope": [
+                "TStick_203.1"
+            ],
+            "use_inst": false,
+            "version": 0
+        },
+        {
+            "sources": [
+                "TStick_203.1/ypr"
+            ],
+            "destinations": [
+                "TD_technology.1/lineRotY"
+            ],
+            "expression": "sMin=-1.57;sMax=1.57;dMin=0;dMax=1;sRange=sMax-sMin;m=sRange?((dMax-dMin)/sRange):0;b=sRange?(dMin*sMax-dMax*sMin)/sRange:dMin;y=m*x[1]+b;",
+            "muted": false,
+            "process_loc": "SOURCE",
+            "protocol": "UDP",
+            "scope": [
+                "TStick_203.1"
+            ],
+            "use_inst": false,
+            "version": 0
+        },
+        {
+            "sources": [
+                "TStick_203.1/ypr"
+            ],
+            "destinations": [
+                "TD_technology.1/lineRotX"
+            ],
+            "expression": "sMin=-3.14159;sMax=3.14159;dMin=1;dMax=0;sRange=sMax-sMin;m=sRange?((dMax-dMin)/sRange):0;b=sRange?(dMin*sMax-dMax*sMin)/sRange:dMin;y=m*x[0]+b;",
+            "muted": false,
+            "process_loc": "SOURCE",
+            "protocol": "UDP",
+            "scope": [
+                "TStick_203.1"
+            ],
+            "use_inst": false,
+            "version": 0
+        },
+        {
+            "sources": [
+                "TStick_311.1/instrument/squeeze"
+            ],
+            "destinations": [
+                "TD_technology.1/linesX"
+            ],
+            "expression": "y=x;",
+            "muted": false,
+            "process_loc": "SOURCE",
+            "protocol": "UDP",
+            "scope": [
+                "TStick_311.1"
+            ],
+            "use_inst": false,
+            "version": 0
+        },
+        {
+            "sources": [
+                "TStick_311.1/instrument/squeeze"
+            ],
+            "destinations": [
+                "TD_technology.1/linesY"
+            ],
+            "expression": "y=x;",
+            "muted": false,
+            "process_loc": "SOURCE",
+            "protocol": "UDP",
+            "scope": [
+                "TStick_311.1"
+            ],
+            "use_inst": false,
+            "version": 0
+        },
+        {
+            "sources": [
+                "TStick_311.1/instrument/squeeze"
+            ],
+            "destinations": [
+                "TD_technology.1/hueOffset"
+            ],
+            "expression": "y=x",
+            "muted": false,
+            "process_loc": "SOURCE",
+            "protocol": "UDP",
+            "scope": [
+                "TStick_311.1"
+            ],
+            "use_inst": false,
+            "version": 0
+        },
+        {
+            "sources": [
+                "TStick_311.1/instrument/squeeze"
+            ],
+            "destinations": [
+                "TD_technology.1/forceNoise"
+            ],
+            "expression": "y=x;",
+            "muted": false,
+            "process_loc": "SOURCE",
+            "protocol": "UDP",
+            "scope": [
+                "TStick_311.1"
+            ],
+            "use_inst": false,
+            "version": 0
+        }
+    ]
+}

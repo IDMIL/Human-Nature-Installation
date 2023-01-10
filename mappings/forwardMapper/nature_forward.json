@@ -1,0 +1,331 @@
+{
+    "fileversion": "2.4",
+    "description": "",
+    "values": [],
+    "views": [],
+    "maps": [
+        {
+            "sources": [
+                "forward.1/TStick_194/instrument/shakexyz"
+            ],
+            "destinations": [
+                "SuperCollider.1/nature/leaves/amp"
+            ],
+            "expression": "sMin=0;sMax=100;dMin=0.1;dMax=0.8;sRange=sMax-sMin;m=sRange?((dMax-dMin)/sRange):0;b=sRange?(dMin*sMax-dMax*sMin)/sRange:dMin;y=m*x.sum()/3+b;",
+            "muted": false,
+            "process_loc": "SOURCE",
+            "protocol": "UDP",
+            "scope": [
+                "forward.1"
+            ],
+            "use_inst": false,
+            "version": 0
+        },
+        {
+            "sources": [
+                "forward.1/TStick_194/instrument/shakexyz"
+            ],
+            "destinations": [
+                "SuperCollider.1/nature/sinHarm/rate"
+            ],
+            "expression": "sMin=0;sMax=100;dMin=0.1;dMax=10;sRange=sMax-sMin;m=sRange?((dMax-dMin)/sRange):0;b=sRange?(dMin*sMax-dMax*sMin)/sRange:dMin;y=m*x.sum()/3+b;",
+            "muted": false,
+            "process_loc": "SOURCE",
+            "protocol": "UDP",
+            "scope": [
+                "forward.1"
+            ],
+            "use_inst": false,
+            "version": 0
+        },
+        {
+            "sources": [
+                "forward.1/TStick_194/raw/capsense"
+            ],
+            "destinations": [
+                "SuperCollider.1/nature/branch/amp"
+            ],
+            "expression": "sMin=0;sMax=1;dMin=0.1;dMax=0.2;sRange=sMax-sMin;m=sRange?((dMax-dMin)/sRange):0;b=sRange?(dMin*sMax-dMax*sMin)/sRange:dMin;y=m*x.sum()/16+b;",
+            "muted": false,
+            "process_loc": "SOURCE",
+            "protocol": "UDP",
+            "scope": [
+                "forward.1"
+            ],
+            "use_inst": false,
+            "version": 0
+        },
+        {
+            "sources": [
+                "forward.1/TStick_194/raw/capsense"
+            ],
+            "destinations": [
+                "SuperCollider.1/nature/branch/delay"
+            ],
+            "expression": "sMin=0;sMax=1;dMin=0.1;dMax=2;sRange=sMax-sMin;m=sRange?((dMax-dMin)/sRange):0;b=sRange?(dMin*sMax-dMax*sMin)/sRange:dMin;y=m*x.sum()/16+b;",
+            "muted": false,
+            "process_loc": "SOURCE",
+            "protocol": "UDP",
+            "scope": [
+                "forward.1"
+            ],
+            "use_inst": false,
+            "version": 0
+        },
+        {
+            "sources": [
+                "forward.1/TStick_194/raw/capsense"
+            ],
+            "destinations": [
+                "SuperCollider.1/nature/crunchy/amp"
+            ],
+            "expression": "sMin=0;sMax=1;dMin=0.1;dMax=0.4;sRange=sMax-sMin;m=sRange?((dMax-dMin)/sRange):0;b=sRange?(dMin*sMax-dMax*sMin)/sRange:dMin;y=m*x.sum()/16+b;",
+            "muted": false,
+            "process_loc": "SOURCE",
+            "protocol": "UDP",
+            "scope": [
+                "forward.1"
+            ],
+            "use_inst": false,
+            "version": 0
+        },
+        {
+            "sources": [
+                "forward.1/TStick_203/ypr"
+            ],
+            "destinations": [
+                "SuperCollider.1/nature/spatial/branchAzi"
+            ],
+            "expression": "sMin=-3.14159;sMax=3.14159;dMin=-90;dMax=90;sRange=sMax-sMin;m=sRange?((dMax-dMin)/sRange):0;b=sRange?(dMin*sMax-dMax*sMin)/sRange:dMin;y=m*x[0]+b;",
+            "muted": false,
+            "process_loc": "SOURCE",
+            "protocol": "UDP",
+            "scope": [
+                "forward.1"
+            ],
+            "use_inst": false,
+            "version": 0
+        },
+        {
+            "sources": [
+                "forward.1/TStick_203/ypr"
+            ],
+            "destinations": [
+                "SuperCollider.1/nature/spatial/crunchAzi"
+            ],
+            "expression": "sMin=-3.15;sMax=3.15;dMin=-90;dMax=90;sRange=sMax-sMin;m=sRange?((dMax-dMin)/sRange):0;b=sRange?(dMin*sMax-dMax*sMin)/sRange:dMin;y=m*x[0]+b;",
+            "muted": false,
+            "process_loc": "SOURCE",
+            "protocol": "UDP",
+            "scope": [
+                "forward.1"
+            ],
+            "use_inst": false,
+            "version": 0
+        },
+        {
+            "sources": [
+                "forward.1/TStick_203/ypr"
+            ],
+            "destinations": [
+                "SuperCollider.1/nature/spatial/leadAzi"
+            ],
+            "expression": "sMin=-3.15;sMax=3.15;dMin=-90;dMax=90;sRange=sMax-sMin;m=sRange?((dMax-dMin)/sRange):0;b=sRange?(dMin*sMax-dMax*sMin)/sRange:dMin;y=m*x[0]+b;",
+            "muted": false,
+            "process_loc": "SOURCE",
+            "protocol": "UDP",
+            "scope": [
+                "forward.1"
+            ],
+            "use_inst": false,
+            "version": 0
+        },
+        {
+            "sources": [
+                "forward.1/TStick_203/raw/capsense"
+            ],
+            "destinations": [
+                "SuperCollider.1/nature/lead/amp"
+            ],
+            "expression": "sMin=0;sMax=1;dMin=0;dMax=0.3;sRange=sMax-sMin;m=sRange?((dMax-dMin)/sRange):0;b=sRange?(dMin*sMax-dMax*sMin)/sRange:dMin;y=m*x.sum()/16+b;",
+            "muted": false,
+            "process_loc": "SOURCE",
+            "protocol": "UDP",
+            "scope": [
+                "forward.1"
+            ],
+            "use_inst": false,
+            "version": 0
+        },
+        {
+            "sources": [
+                "forward.1/TStick_203/raw/capsense"
+            ],
+            "destinations": [
+                "SuperCollider.1/nature/lead/feedback"
+            ],
+            "expression": "sMin=0;sMax=1;dMin=0;dMax=0.7;sRange=sMax-sMin;m=sRange?((dMax-dMin)/sRange):0;b=sRange?(dMin*sMax-dMax*sMin)/sRange:dMin;y=m*x.sum()/16+b;",
+            "muted": false,
+            "process_loc": "SOURCE",
+            "protocol": "UDP",
+            "scope": [
+                "forward.1"
+            ],
+            "use_inst": false,
+            "version": 0
+        },
+        {
+            "sources": [
+                "forward.1/TStick_311/raw/capsense"
+            ],
+            "destinations": [
+                "SuperCollider.1/nature/pad/amp"
+            ],
+            "expression": "sMin=0;sMax=1;dMin=0.1;dMax=0.8;sRange=sMax-sMin;m=sRange?((dMax-dMin)/sRange):0;b=sRange?(dMin*sMax-dMax*sMin)/sRange:dMin;y=m*x.sum()/16+b;",
+            "muted": false,
+            "process_loc": "SOURCE",
+            "protocol": "UDP",
+            "scope": [
+                "forward.1"
+            ],
+            "use_inst": false,
+            "version": 0
+        },
+        {
+            "sources": [
+                "forward.1/TStick_311/instrument/squeeze"
+            ],
+            "destinations": [
+                "SuperCollider.1/nature/pad/cutOff"
+            ],
+            "expression": "sMin=0;sMax=1;dMin=400;dMax=10000;sRange=sMax-sMin;m=sRange?((dMax-dMin)/sRange):0;b=sRange?(dMin*sMax-dMax*sMin)/sRange:dMin;y=m*x+b;",
+            "muted": false,
+            "process_loc": "SOURCE",
+            "protocol": "UDP",
+            "scope": [
+                "forward.1"
+            ],
+            "use_inst": false,
+            "version": 0
+        },
+        {
+            "sources": [
+                "forward.1/TStick_194/instrument/shakexyz"
+            ],
+            "destinations": [
+                "TD_nature.1/particleRadius"
+            ],
+            "expression": "sMin=0;sMax=150;dMin=0;dMax=1;sRange=sMax-sMin;m=sRange?((dMax-dMin)/sRange):0;b=sRange?(dMin*sMax-dMax*sMin)/sRange:dMin;y=m*x.sum()/3+b;",
+            "muted": false,
+            "process_loc": "SOURCE",
+            "protocol": "UDP",
+            "scope": [
+                "forward.1"
+            ],
+            "use_inst": false,
+            "version": 0
+        },
+        {
+            "sources": [
+                "forward.1/TStick_194/instrument/shakexyz"
+            ],
+            "destinations": [
+                "TD_nature.1/displace"
+            ],
+            "expression": "sMin=0;sMax=150;dMin=0;dMax=1;sRange=sMax-sMin;m=sRange?((dMax-dMin)/sRange):0;b=sRange?(dMin*sMax-dMax*sMin)/sRange:dMin;y=m*x.sum()/12+b;",
+            "muted": false,
+            "process_loc": "SOURCE",
+            "protocol": "UDP",
+            "scope": [
+                "forward.1"
+            ],
+            "use_inst": false,
+            "version": 0
+        },
+        {
+            "sources": [
+                "forward.1/TStick_203/ypr"
+            ],
+            "destinations": [
+                "TD_nature.1/camRotX"
+            ],
+            "expression": "sMin=-3.15;sMax=3.15;dMin=0;dMax=1;sRange=sMax-sMin;m=sRange?((dMax-dMin)/sRange):0;b=sRange?(dMin*sMax-dMax*sMin)/sRange:dMin;y=m*x[0]+b;",
+            "muted": false,
+            "process_loc": "SOURCE",
+            "protocol": "UDP",
+            "scope": [
+                "forward.1"
+            ],
+            "use_inst": false,
+            "version": 0
+        },
+        {
+            "sources": [
+                "forward.1/TStick_203/ypr"
+            ],
+            "destinations": [
+                "TD_nature.1/camRotY"
+            ],
+            "expression": "sMin=-1.57;sMax=1.57;dMin=0;dMax=1;sRange=sMax-sMin;m=sRange?((dMax-dMin)/sRange):0;b=sRange?(dMin*sMax-dMax*sMin)/sRange:dMin;y=m*x[1]+b;",
+            "muted": false,
+            "process_loc": "SOURCE",
+            "protocol": "UDP",
+            "scope": [
+                "forward.1"
+            ],
+            "use_inst": false,
+            "version": 0
+        },
+        {
+            "sources": [
+                "forward.1/TStick_311/instrument/squeeze"
+            ],
+            "destinations": [
+                "TD_nature.1/hueOffset"
+            ],
+            "expression": "y=x",
+            "muted": false,
+            "process_loc": "SOURCE",
+            "protocol": "UDP",
+            "scope": [
+                "forward.1"
+            ],
+            "use_inst": false,
+            "version": 0
+        },
+        {
+            "sources": [
+                "forward.1/TStick_311/instrument/squeeze"
+            ],
+            "destinations": [
+                "TD_nature.1/forceStrength"
+            ],
+            "expression": "y=x;",
+            "muted": false,
+            "process_loc": "SOURCE",
+            "protocol": "UDP",
+            "scope": [
+                "forward.1"
+            ],
+            "use_inst": false,
+            "version": 0
+        },
+        {
+            "sources": [
+                "forward.1/TStick_311/raw/capsense"
+            ],
+            "destinations": [
+                "TD_nature.1/camTransZ"
+            ],
+            "expression": "sMin=0;sMax=1;dMin=0;dMax=1;sRange=sMax-sMin;m=sRange?((dMax-dMin)/sRange):0;b=sRange?(dMin*sMax-dMax*sMin)/sRange:dMin;y=m*x.sum()/16+b;",
+            "muted": false,
+            "process_loc": "SOURCE",
+            "protocol": "UDP",
+            "scope": [
+                "forward.1"
+            ],
+            "use_inst": false,
+            "version": 0
+        }
+    ]
+}

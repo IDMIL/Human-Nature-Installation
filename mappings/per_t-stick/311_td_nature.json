@@ -1,0 +1,59 @@
+{
+    "fileversion": "2.4",
+    "description": "",
+    "values": [],
+    "views": [],
+    "maps": [
+        {
+            "sources": [
+                "TStick_311.1/instrument/squeeze"
+            ],
+            "destinations": [
+                "TD_nature.1/hueOffset"
+            ],
+            "expression": "y=x",
+            "muted": false,
+            "process_loc": "SOURCE",
+            "protocol": "UDP",
+            "scope": [
+                "TStick_311.1"
+            ],
+            "use_inst": false,
+            "version": 0
+        },
+        {
+            "sources": [
+                "TStick_311.1/instrument/squeeze"
+            ],
+            "destinations": [
+                "TD_nature.1/forceStrength"
+            ],
+            "expression": "y=x;",
+            "muted": false,
+            "process_loc": "SOURCE",
+            "protocol": "UDP",
+            "scope": [
+                "TStick_311.1"
+            ],
+            "use_inst": false,
+            "version": 0
+        },
+        {
+            "sources": [
+                "TStick_311.1/raw/capsense"
+            ],
+            "destinations": [
+                "TD_nature.1/camTransZ"
+            ],
+            "expression": "sMin=0;sMax=1;dMin=0;dMax=1;sRange=sMax-sMin;m=sRange?((dMax-dMin)/sRange):0;b=sRange?(dMin*sMax-dMax*sMin)/sRange:dMin;y=m*x.sum()/16+b;",
+            "muted": false,
+            "process_loc": "SOURCE",
+            "protocol": "UDP",
+            "scope": [
+                "TStick_311.1"
+            ],
+            "use_inst": false,
+            "version": 0
+        }
+    ]
+}

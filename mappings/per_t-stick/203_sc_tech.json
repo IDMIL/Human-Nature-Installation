@@ -1,0 +1,110 @@
+{
+    "fileversion": "2.4",
+    "description": "",
+    "values": [],
+    "views": [],
+    "maps": [
+        {
+            "sources": [
+                "TStick_203.1/raw/capsense"
+            ],
+            "destinations": [
+                "SuperCollider.1/humans/pad/sawAmp"
+            ],
+            "expression": "sMin=0;sMax=1;dMin=0;dMax=0.3;sRange=sMax-sMin;m=sRange?((dMax-dMin)/sRange):0;b=sRange?(dMin*sMax-dMax*sMin)/sRange:dMin;y=m*x.sum()/20+b;",
+            "muted": false,
+            "process_loc": "SOURCE",
+            "protocol": "UDP",
+            "scope": [
+                "TStick_203.1"
+            ],
+            "use_inst": false,
+            "version": 0
+        },
+        {
+            "sources": [
+                "TStick_203.1/ypr"
+            ],
+            "destinations": [
+                "SuperCollider.1/humans/spatial/crackAzi"
+            ],
+            "expression": "sMin=-3.15;sMax=3.15;dMin=-90;dMax=90;sRange=sMax-sMin;m=sRange?((dMax-dMin)/sRange):0;b=sRange?(dMin*sMax-dMax*sMin)/sRange:dMin;y=m*x[0]+b;",
+            "muted": false,
+            "process_loc": "SOURCE",
+            "protocol": "UDP",
+            "scope": [
+                "TStick_203.1"
+            ],
+            "use_inst": false,
+            "version": 0
+        },
+        {
+            "sources": [
+                "TStick_203.1/ypr"
+            ],
+            "destinations": [
+                "SuperCollider.1/humans/spatial/ringBgAzi"
+            ],
+            "expression": "sMin=-3.15;sMax=3.15;dMin=-90;dMax=90;sRange=sMax-sMin;m=sRange?((dMax-dMin)/sRange):0;b=sRange?(dMin*sMax-dMax*sMin)/sRange:dMin;y=m*x[0]+b;",
+            "muted": false,
+            "process_loc": "SOURCE",
+            "protocol": "UDP",
+            "scope": [
+                "TStick_203.1"
+            ],
+            "use_inst": false,
+            "version": 0
+        },
+        {
+            "sources": [
+                "TStick_203.1/ypr"
+            ],
+            "destinations": [
+                "SuperCollider.1/humans/spatial/ringMelAzi"
+            ],
+            "expression": "sMin=-3.15;sMax=3.15;dMin=-90;dMax=90;sRange=sMax-sMin;m=sRange?((dMax-dMin)/sRange):0;b=sRange?(dMin*sMax-dMax*sMin)/sRange:dMin;y=m*x[0]+b;",
+            "muted": false,
+            "process_loc": "SOURCE",
+            "protocol": "UDP",
+            "scope": [
+                "TStick_203.1"
+            ],
+            "use_inst": false,
+            "version": 0
+        },
+        {
+            "sources": [
+                "TStick_203.1/raw/capsense"
+            ],
+            "destinations": [
+                "SuperCollider.1/humans/chaos/amp"
+            ],
+            "expression": "sMin=0;sMax=1;dMin=0;dMax=0.3;sRange=sMax-sMin;m=sRange?((dMax-dMin)/sRange):0;b=sRange?(dMin*sMax-dMax*sMin)/sRange:dMin;y=m*x.sum()/20+b;",
+            "muted": false,
+            "process_loc": "SOURCE",
+            "protocol": "UDP",
+            "scope": [
+                "TStick_203.1"
+            ],
+            "use_inst": false,
+            "version": 0
+        },
+        {
+            "sources": [
+                "TStick_203.1/raw/capsense"
+            ],
+            "destinations": [
+                "SuperCollider.1/humans/chaos/release"
+            ],
+            "expression": "sMin=0;sMax=1;dMin=0;dMax=0.5;sRange=sMax-sMin;m=sRange?((dMax-dMin)/sRange):0;b=sRange?(dMin*sMax-dMax*sMin)/sRange:dMin;y=m*x.sum()/20+b;",
+            "muted": false,
+            "process_loc": "SOURCE",
+            "protocol": "UDP",
+            "scope": [
+                "TStick_203.1"
+            ],
+            "use_inst": false,
+            "version": 0
+        }
+    ]
+}
